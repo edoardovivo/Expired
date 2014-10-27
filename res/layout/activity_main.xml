@@ -1,0 +1,111 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="com.example.expired.ui.phone.MainActivity" >
+
+    <TableLayout
+        android:id="@+id/tableLayout1"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true" >
+
+        
+        <TableRow
+            android:id="@+id/tableRow1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:weightSum="3" >
+
+            <EditText
+                android:id="@+id/TextProdName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:hint="Description"
+                android:inputType="text"
+                android:textSize="14sp"
+                android:width="0dp" />
+            
+            <EditText
+                android:id="@+id/TextBought"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:hint="Date Bought"
+                android:inputType="date"
+                android:textSize="14sp"
+                android:width="0dp" 
+                android:focusable="false"/>
+
+            <EditText
+                android:id="@+id/TextExpDate"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:hint="Expiring Date"
+                android:inputType="date"
+                android:textSize="14sp"
+                android:width="0dp" 
+                android:focusable="false"/>
+
+        </TableRow>
+    </TableLayout>
+    
+    
+	<Button
+        android:id="@+id/button_display"
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/button_add"
+        android:onClick="onClick_Display"
+        android:text="Display" />
+    
+    <Button
+        android:id="@+id/button_cleardata"
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/button_add"
+        android:layout_toRightOf="@+id/button_display"
+        android:onClick="onClick_ClearData"
+        android:text="Clear Data" />
+    
+    <Button
+        android:id="@+id/button_add"
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tableLayout1"
+        android:layout_toRightOf="@+id/button_cleardata"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="10dp"
+        android:onClick="onClick_AddRecord"
+        android:text="Add Item" />
+
+    
+
+    <Button
+        android:id="@+id/ClearText"
+        android:layout_width="45dip"
+        android:layout_height="45dip"
+        android:layout_alignBottom="@+id/button_add"
+        android:layout_toRightOf="@+id/button_add"
+        android:background="@drawable/image_clear"
+        android:onClick="OnClearTextClick" />
+    
+    
+  
+	<ListView 
+	    android:id="@+id/DATABASE" 
+	    android:layout_below="@+id/button_display"
+	    android:layout_width="wrap_content" 
+	    android:layout_height="wrap_content">
+	</ListView>
+
+</RelativeLayout>
